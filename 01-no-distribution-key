@@ -1,0 +1,179 @@
+DROP TABLE IF EXISTS products;
+
+CREATE TABLE products (
+  product_id INT,
+  product_name VARCHAR(50),
+  price DECIMAL(10, 2),
+  category VARCHAR(50),
+  PRIMARY KEY (product_id, product_name, category)
+);
+
+INSERT INTO
+  products (product_id, product_name, price, category)
+VALUES
+  (1, 'りんご', 150, '果物'),
+  (2, 'バナナ', 100, '果物'),
+  (3, 'みかん', 200, '果物'),
+  (4, 'ピーマン', 100, '野菜'),
+  (5, 'キャベツ', 200, '野菜'),
+  (6, 'メロン', 1000, '果物'),
+  (7, 'もやし', 30, '野菜'),
+  (8, 'トマト', 250, '野菜'),
+  (9, 'きゅうり', 120, '野菜'),
+  (10, 'なす', 180, '野菜'),
+  (11, '玉ねぎ', 80, '野菜'),
+  (12, 'じゃがいも', 100, '野菜'),
+  (13, '青梗菜', 220, '野菜'),
+  (14, 'ごぼう', 190, '野菜'),
+  (15, 'レタス', 160, '野菜'),
+  (16, 'ほうれん草', 140, '野菜'),
+  (17, 'ブロッコリー', 280, '野菜'),
+  (18, 'ぶどう', 500, '果物'),
+  (19, 'いちご', 450, '果物'),
+  (20, '桃', 600, '果物'),
+  (21, '梨', 350, '果物'),
+  (22, '柿', 280, '果物'),
+  (23, 'キウイ', 90, '果物'),
+  (24, 'パイナップル', 400, '果物'),
+  (25, 'アボカド', 300, '果物'), -- Often considered a fruit
+  (26, 'マンゴー', 700, '果物'),
+  (27, 'さくらんぼ', 800, '果物'),
+  (28, 'パセリ', 100, '野菜'),
+  (29, 'セロリ', 220, '野菜'),
+  (30, 'カリフラワー', 300, '野菜'),
+  (31, 'ターサイ', 250, '野菜'),
+  (32, 'かぼちゃ', 350, '野菜'),
+  (33, 'さつまいも', 180, '野菜'),
+  (34, 'しいたけ', 200, '野菜'),
+  (35, 'まいたけ', 220, '野菜'),
+  (36, 'えのき', 80, '野菜'),
+  (37, 'しめじ', 90, '野菜'),
+  (38, '長ネギ', 130, '野菜'),
+  (39, '白菜', 280, '野菜'),
+  (40, '小松菜', 120, '野菜'),
+  (41, '春菊', 150, '野菜'),
+  (42, 'にんじん', 90, '野菜'),
+  (43, 'ごま', 200, '野菜'),
+  (44, 'レモン', 120, '果物'),
+  (45, 'スイカ', 150, '果物'),
+  (46, 'グレープフルーツ', 280, '果物'),
+  (47, 'ブルーベリー', 600, '果物'),
+  (48, 'ラズベリー', 650, '果物'),
+  (49, 'ブラックベリー', 700, '果物'),
+  (50, 'いちじく', 400, '果物'),
+  (51, 'すいか', 900, '果物'),
+  (52, 'マスカット', 1200, '果物'),
+  (53, 'びわ', 380, '果物'),
+  (54, 'あんず', 300, '果物'),
+  (55, 'プルーン', 320, '果物'),
+  (56, 'ズッキーニ', 200, '野菜'),
+  (57, 'パプリカ(赤)', 250, '野菜'),
+  (58, 'パプリカ(黄)', 250, '野菜'),
+  (59, 'えのき', 350, '野菜'),
+  (60, 'そら豆', 280, '野菜'),
+  (61, '枝豆', 200, '野菜'),
+  (62, 'オクラ', 180, '野菜'),
+  (63, 'ニラ', 100, '野菜'),
+  (64, 'ミョウガ', 150, '野菜'),
+  (65, 'しょうが', 100, '野菜'),
+  (66, 'にんにく', 120, '野菜'),
+  (67, 'かいわれ大根', 80, '野菜'),
+  (68, '水菜', 110, '野菜'),
+  (69, 'ルッコラ', 160, '野菜'),
+  (70, 'クレソン', 180, '野菜'),
+  (71, 'サニーレタス', 170, '野菜'),
+  (72, 'フリルレタス', 180, '野菜'),
+  (73, 'わさび菜', 140, '野菜'),
+  (74, 'たけのこ', 400, '野菜'),
+  (75, 'ふき', 250, '野菜'),
+  (76, 'せり', 130, '野菜'),
+  (77, 'ウド', 300, '野菜'),
+  (78, 'ししとう', 150, '野菜'),
+  (79, '万願寺とうがらし', 200, '野菜'),
+  (80, 'ゴーヤ', 220, '野菜'),
+  (81, 'モロヘイヤ', 180, '野菜'),
+  (82, 'ツルムラサキ', 160, '野菜'),
+  (83, 'オニオン(新玉)', 120, '野菜'),
+  (84, 'じゃがいも(新)', 130, '野菜'),
+  (85, 'ごぼう(新)', 210, '野菜'),
+  (86, 'さつまいも(安納芋)', 250, '野菜'),
+  (87, 'かぼちゃ(坊ゃん)', 380, '野菜'),
+  (88, 'りんご(フジ)', 160, '果物'),
+  (89, 'りんご(つがる)', 140, '果物'),
+  (90, 'みかん(温州)', 190, '果物'),
+  (91, 'ぶどう(巨峰)', 550, '果物'),
+  (92, 'いちご(あまおう)', 700, '果物'),
+  (93, 'メロン(夕張)', 2000, '果物'),
+  (94, 'レモン(国産)', 180, '果物'),
+  (95, 'オレンジ', 220, '果物'),
+  (96, 'デコポン', 300, '果物'),
+  (97, 'はっさく', 250, '果物'),
+  (98, '金柑', 200, '果物'),
+  (99, 'ザクロ', 450, '果物'),
+  (100, 'すもも', 330, '果物');
+
+SELECT
+  gp_segment_id,
+  product_id,
+  product_name,
+  price,
+  category
+FROM
+  products
+ORDER BY
+  gp_segment_id;
+
+SELECT
+  gp_segment_id,
+  COUNT(*) AS num
+FROM
+  products
+GROUP BY
+  gp_segment_id;
+
+---
+DROP TABLE IF EXISTS categories;
+
+CREATE TABLE categories (
+  category_name VARCHAR(50) PRIMARY KEY,
+  description VARCHAR(100)
+) DISTRIBUTED BY (category_name);
+
+INSERT INTO
+  categories (category_name, description)
+VALUES
+  ('果物', '旬の甘くて美味しいフルーツ'),
+  ('野菜', '新鮮で健康的な旬の野菜');
+
+SELECT
+  p.product_id,
+  p.product_name,
+  p.price,
+  p.category,
+  c.description AS category_description
+FROM
+  products AS p -- Alias 'products' as 'p' for brevity
+  INNER JOIN categories AS c ON p.category = c.category_name;
+
+
+EXPLAIN ANALYZE SELECT
+  p.product_id,
+  p.product_name,
+  p.price,
+  p.category,
+  c.description AS category_description
+FROM
+  products AS p -- Alias 'products' as 'p' for brevity
+  INNER JOIN categories AS c ON p.category = c.category_name;
+
+---
+ALTER TABLE categories SET DISTRIBUTED REPLICATED;
+EXPLAIN ANALYZE SELECT
+  p.product_id,
+  p.product_name,
+  p.price,
+  p.category,
+  c.description AS category_description
+FROM
+  products AS p -- Alias 'products' as 'p' for brevity
+  INNER JOIN categories AS c ON p.category = c.category_name;
